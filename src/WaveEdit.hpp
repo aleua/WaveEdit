@@ -8,6 +8,7 @@
 #include <math.h>
 
 #include <string>
+#include <map>
 #include <thread>
 #include <vector>
 #include <complex>
@@ -121,6 +122,7 @@ unsigned char *base64_decode(const unsigned char *src, size_t len, size_t *out_l
 ////////////////////
 
 #define WAVE_LEN 256
+
 
 enum EffectID {
 	PRE_GAIN,
@@ -240,6 +242,8 @@ void catalogInit();
 ////////////////////
 
 // TODO Some of these should not be exposed in the header
+extern char noteNameString[256];
+extern std::map<std::string, int> noteNameMap;
 extern float playVolume;
 extern float playFrequency;
 extern float playFrequencySmooth;

@@ -113,7 +113,7 @@ void Bank::loadWAV(const char *filename) {
 void Bank::saveWaves(const char *dirname) {
 	for (int b = 0; b < BANK_LEN; b++) {
 		char filename[1024];
-		snprintf(filename, sizeof(filename), "%s/%02d.wav", dirname, b);
+		snprintf(filename, sizeof(filename), "%s/%s_%02d.wav", dirname, noteNameString, b);
 
 		waves[b].saveWAV(filename);
 	}

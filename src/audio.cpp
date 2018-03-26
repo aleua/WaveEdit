@@ -2,7 +2,7 @@
 #include <SDL.h>
 #include <samplerate.h>
 
-
+char noteNameString[256];
 float playVolume = -12.0;
 float playFrequency = 220.0;
 float playFrequencySmooth = playFrequency;
